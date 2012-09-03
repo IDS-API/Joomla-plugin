@@ -1,4 +1,4 @@
-Development and implimentation of an IDS Open API Joomla Plugin
+Development and implimentation of an IDS KS Open API Joomla Plugin
 
 Disclaimer of Warranty.
 

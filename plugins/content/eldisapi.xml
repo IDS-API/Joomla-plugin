@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="1.6.0" type="plugin" group="content" client="site" method="upgrade">
-   <name>Content - Eldis API</name>
+<extension version="1.6.2" type="plugin" group="content" client="site" method="upgrade">
+   <name>Content - IDS KS Open API Joomla Plugin</name>
    <author>OneWorld</author>
    <creationDate>September 2011</creationDate>
    <copyright></copyright>
    <license>see LICENSE.TXT</license>
    <authorEmail>editor@oneworld.net</authorEmail>
    <authorUrl>http://southasia.oneworld.net</authorUrl>
-   <version>1.6.02</version>
-   <description>Eldis plugin to create article using eldis open API. <ul><li>For more documentation please click <a target='blank' href='../plugins/content/eldisapi/eldisapi/docs/eldis_doc.html'>here</a> </li><li>Terms and condition for using API see <a target='blank' href='http://api.ids.ac.uk/about/terms.shtml'>here</a></li></ul></description>
+   <version>1.6.2</version>
+   <description>ELDIS_API_DESC</description>
    <files>
        <filename plugin="eldisapi">eldisapi.php</filename>
        <filename>eldis_helper.php</filename>
@@ -28,9 +28,9 @@
 				<field name="eldis_guid" size="50" required="true" type="guid" default="" label="ELDIS_GUID" description="ELDIS_GUID_DESC" />
 				<field name="eldis_server" size="50" type="text" default="http://api.ids.ac.uk/" label="ELDIS_SERVER" description="ELDIS_SERVER_DESC" />
 				
-				<field name="eldis_data_server" type="radio" label="Select server" default="eldis" description="eldis_data_server">
+				<field name="eldis_data_server" type="radio" label="Select dataset" default="eldis" description="Select either: &lt;ul&gt;&lt;li&gt;the Eldis dataset - covering a broad thematic range of development research&lt;/li&gt;&lt;li&gt;the BRIDGE dataset - covering gender advocacy and mainstreaming&lt;/li&gt;&lt;/ul&gt;">
 					<option value="eldis">Eldis</option>
-					<option value="bridge">Bridge</option>	
+					<option value="bridge">BRIDGE</option>	
 				</field>
 							
 				<field name="eldis_data_format" type="list" label="ELDIS_DATA_FORMAT" default="full" description="ELDIS_DATA_FORMAT_DESC">
@@ -43,13 +43,13 @@
 				<field name="eldis_pub_after" size="50" type="calendar" format="%Y-%m-%d" default="" label="ELDIS_PUB_AFTER" description="ELDIS_PUB_AFTER_DESC" />
 				<field name="eldis_pub_before" size="50" type="calendar" format="%Y-%m-%d" default="" label="ELDIS_PUB_BEFORE" description="ELDIS_PUB_BEFORE_DESC" />
 				<field name="eldis_pub_year" size="50" type="calendar" format="%Y" default="" label="ELDIS_PUB_YEAR" description="ELDIS_PUB_YEAR_DESC" />
-				<field name="eldis_skip_days" size="5" type="text" default="2" label="ELDIS_SKIP_DAYS" description="ELDIS_SKIP_DAYS_DESC"/>
+				<field name="eldis_skip_days" size="5" type="text" default="2" label="ELDIS_SKIP_DAYS" description="ELDIS_SKIP_DAYS_DESC" />
 				
 				<field type="spacer" default="ELDIS_SPACER_SEARCH_OPTIONS" />
 
 				<field name="eldis_article_author" size="50" type="text" default="" label="ELDIS_ARTICLE_AUTHOR" description="ELDIS_ARTICLE_AUTHOR_DESC" />
 				<field name="eldis_article_publisher" size="50" type="text" default="" label="ELDIS_ARTICLE_PUBLISHER" description="ELDIS_ARTICLE_PUBLISHER_DESC" />
-		 		<field name="eldis_article_country_list" type="multicountry"  multiple="multiple" label="Select Contries" description="Select one or more items from the list.  You can use Ctrl-click to select more than one item." addfieldpath="/administrator/components/com_eldisapi/elements" /> 
+		 		<field name="eldis_article_country_list" type="multicountry"  multiple="multiple" label="Select Countries" description="Countries that the document focuses on. You can select one or more items from the list.  Use Ctrl-click to select more than one item." addfieldpath="/administrator/components/com_eldisapi/elements" /> 
 				<field name="eldis_article_country" type="textarea"  label="Selected countries" description="" rows="2" cols="27" />
 				<field name="eldis_article_keyword" size="50" type="text" default="" label="ELDIS_ARTICLE_KEYWORD" description="ELDIS_ARTICLE_KEYWORD_DESC" />
      			<field name="eldis_article_theme_list" type="multithemes"  multiple="multiple" label="Selecte themes" description="Double click to select themes" addfieldpath="/administrator/components/com_eldisapi/elements" />
@@ -64,14 +64,15 @@
 				</field>	
 				<field name="eldis_sort_value" type="list" label="ELDIS_SORT_VALUE" default="default" description="ELDIS_SORT_VALUE_DESC">
 					<option value="default">ELDIS_SORT_FORMAT_OPT_SORT_VALUE_DEFAULT</option>
-					<option value="asset_id">ELDIS_SORT_FORMAT_OPT_SORT_VALUE_ASSET_ID</option>
 					<option value="author">ELDIS_SORT_FORMAT_OPT_SORT_VALUE_SORT_AUTHOR</option>
 					<option value="date_created">ELDIS_SORT_FORMAT_OPT_SORT_VALUE_DATE_CREATED</option>
-					<option value="object_id">ELDIS_SORT_FORMAT_OPT_SORT_VALUE_OBJECT_ID</option>
 					<option value="publication_date">ELDIS_SORT_FORMAT_OPT_SORT_VALUE_PUBLICATION_DATE</option>
 					<option value="publisher">ELDIS_SORT_FORMAT_OPT_SORT_VALUE_PUBLISHER</option>
 					<option value="title">ELDIS_SORT_FORMAT_OPT_SORT_VALUE_TITLE</option>
 				</field>
+			</fieldset>	
+			<fieldset name="JoomlaOptions" label="Joomla Configuration">
+				<field type="spacer" default="JOOMLA_OPTIONS" />	
 				<field name="mycategory" type="category" extension="com_content" label="Select a category" description="" />
 				<field type="button" description="Click for preview" />
 			</fieldset>

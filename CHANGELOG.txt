@@ -1,8 +1,8 @@
 /**
  * Changelog
  *
- * @package     Eldis Open API plugin
- * @version     1.6.01
+ * @package     IDS KS Open API Joomla plugin
+ * @version     1.6.2
  *
  * @author      
  * @copyright   
@@ -18,5 +18,9 @@
 
 
 
-18-Jan-2010 : v1.0.0
+18-Jan-2010 : v1.6.1
  + First release
+ 
+10-Aug-2012: v1.6.2
+# Author variable not being correctly passed
+^ Display of themes made more user friendly

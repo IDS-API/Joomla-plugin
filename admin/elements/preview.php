@@ -35,14 +35,37 @@
    $sort=$_REQUEST["sort"];
    $formate =$_REQUEST["formate"];
    $requesttype="&_accept=application/xml";
-   $baseurl ="http://api.ids.ac.uk/openapi/".$server."/get_all/documents/full?num_results=10";
+   $baseurl ="http://api.ids.ac.uk/openapi/".$server."/search/documents/full?num_results=10";
    $guid="&_token_guid=".$GUID;
-   $before="&metadata_published_before=".$before;
-   $after="&metadata_published_after=".$after;
-   $year="&metadata_published_year=".$year;
+
+   if($before !="")
+	{   $before="&metadata_published_before=".$before;  }
+   else
+   {   $before=="";   } 
+   
+   if($after !="")
+	{   $after="&metadata_published_after=".$after;   }
+   else
+   {   $after=="";   } 
+  
+   if($year !="")
+	{   $year="&metadata_published_year=".$year;   }
+   else
+   {   $year=="";   }
+   
+   if($themes !="")
+	{   $themes="&theme=".$themes;   }
+   else
+   {   $themes=="";   }
+   
+   if($countries !="")
+	{   $countries="&country=".$countries;   }
+   else
+   {   $countries=="";   }
+   
    //server_name
    if (($formate !='default') &&($sort !='default')){$extra .='&'.$formate.'='.$sort;}
-  	$api_url =$baseurl .$guid.  "&theme=".$countries. "&country=".$themes.$requesttype.$before.$after.$year.$extra;
+  	$api_url =$baseurl .$guid. $themes.$countries.$requesttype.$before.$after.$year.$extra;
    $xml = @simplexml_load_file($api_url);
 	if($xml)
 	{
@@ -63,6 +86,6 @@
 	}
 	else
 	{
-		echo '<h3>GUID not valid</h3><p>In order to successfully use the API, users are required to sign up with a Unique ID. It is required that these tokens are sent with every request within the HTTP header. To register for an API key visit <a href="http://api.ids.ac.uk/accounts/register/" target="_blank">http://api.ids.ac.uk/accounts/register/</a></p>';
+		echo '<h3>IDS API Token-GUID or key not valid</h3><p>In order to successfully use this plugin, users are required to sign up for a unique Token-GUID or key. To register for an API key visit <a href="http://api.ids.ac.uk/accounts/register/" target="_blank">http://api.ids.ac.uk/accounts/register/</a>. Once obtained, enter this key into the <em>API Token-GUID or key</em> section of the plugin parameters.</p>';		
 	}
 ?> 

@@ -1,8 +1,8 @@
 /**
  * Changelog
  *
- * @package     Eldis Open API plugin
- * @version     1.6.02
+ * @package     IDS KS Open API Joomla Plugin
+ * @version     1.6.2
  *
  * @author      
  * @copyright   

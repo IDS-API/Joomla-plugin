@@ -99,10 +99,10 @@ class plgContentEldisAPI extends JPlugin
 					if ($eldis_pub_after !=''){$extra .='&document_published_after=$'.$eldis_pub_after;}
 					if ($eldis_pub_before !=''){$extra .='&document_published_before=$'.$eldis_pub_before;}
 					if ($eldis_pub_year !=''){$extra .='&document_published_year=$'.$eldis_pub_year;}					
-					if ($eldis_article_author !=''){$extra .='&author=$'.eldis_article_author;}
+					if ($eldis_article_author !=''){$extra .='&author=$'.$eldis_article_author;}
 					if ($eldis_article_publisher !=''){$extra .='&publisher=$'.$eldis_article_publisher;}
 					if ($eldis_article_country !=''){$extra .='&country=$'.$eldis_article_country;}
-					if ($eldis_article_keyword !=''){$extra .='&keyword=$'.$eldis_article_keyword;}
+					if ($eldis_article_keyword !=''){$extra .='&q=$'.$eldis_article_keyword;}
 					if ($eldis_article_theme !=''){$extra .='&theme=$'.$eldis_article_theme;}	
  					if (($eldis_sort_format !='default') &&($eldis_sort_value !='default')){$extra .='&'.$eldis_sort_format.'='.$eldis_sort_value;}
              

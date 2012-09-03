@@ -1,8 +1,8 @@
 /**
  * Changelog
  *
- * @package     Eldis Open API plugin
- * @version     1.6.01
+ * @package     IDS KS Open API Joomla Plugin
+ * @version     1.6.2
  *
  * @author      
  * @copyright   
@@ -10,32 +10,32 @@
  */
  
  
-Documentation
-==============
-The IDS web API helps programmers to use data and metadata contained in the datasets - BRIDGE and ELDIS - maintained by IDS. The API can be used to search or retrieve the metadata about an object stored in the IDS datasets.
-
-
-Overview
-=========
-The Eldis search API is a HTTP service in a REST style architecture. It allows search of datacore assets based upon a query and a number of meta-data criteria. It also allows search of the category hierarchy within the datacore. Data is returned as either JSON or XML and asset records can be returned in a number of formats including short form and full form.
-
-
-Authentication
-==============
-In order to successfully use the API, users are required to sign up with a Unique ID. It is required that these tokens are sent with every request within the HTTP header. To register for an API key visit http://api.ids.ac.uk/accounts/register/ 
-
-
-Rate limiting
+IDS KS Open API Joomla Plugin documentation
 =============
-Users are currently limited to 30 HTTP requests per minute. Once this has been exceeded, users will receive an HTTP 400 response from the server.
 
+OneWorld South Asia have developed a plug in for the Joomla CMS to showcase IDS Knowledge Services content of thematically organised and hand selected academic research on poverty reduction in the developing world that is freely available to access online.
 
-Searching
-==========
-This allows the assets in the datacore to be searched. In order to search, users will need to specify the /search/ parameter after the base URL, and follow this with the query for that search (for example, to search for biofuels, /search/biofuels/etc..). Users are further able to filter the results by specifying a combination of the meta-data criteria below. Each of these should appear in the same /key/value/ format.
+The plug in allows the administrator to select content from either Eldis or BRIDGE, and import each document as new articles into the site. Once set up, this plugin will automatically bring in new content to your site whenever it is added to the Eldis or BRIDGE websites
 
+You can select:
 
-For more API details please visit http://api.ids.ac.uk/docs
+- Whether you want Eldis or BRIDGE documents
+
+- The number of documents to import
+
+- The date range of when the documents were imported
+
+- The year of publication
+
+- The name of the author
+
+- The name of the publisher
+
+- The country/ies that the document focuses on
+
+- Any keywords assigned to the document
+
+- Any number of themes that are associated with the document
 
 
 Installation

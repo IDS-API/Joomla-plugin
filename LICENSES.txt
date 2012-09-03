@@ -1,4 +1,4 @@
-Development and implimentation of an IDS Open API Joomla Plugin
+Development and implementation of an IDS KS Open API Joomla Plugin
  
    This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

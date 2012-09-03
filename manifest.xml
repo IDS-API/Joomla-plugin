@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/component-install.dtd">
-<extension version="1.6.0" type="component" client="site" method="upgrade">
+<extension version="1.6.2" type="component" client="site" method="upgrade">
 	<name>eldisapi</name>
-	<description>Eldis plugin to create article using eldis open API. <ul><li>For more documentation please click <a target='blank' href='../plugins/content/eldisapi/eldisapi/docs/eldis_doc.html'>here</a> </li><li>Terms and condition for using API see <a target='blank' href='http://api.ids.ac.uk/about/terms.shtml'>here</a></li></ul></description>
-	<version>1.6.02</version>
+	<description>IDS KS Open API Joomla Plugin. The plug in allows the administrator to select content from either Eldis or BRIDGE, and import each document as new articles into the site. Terms and condition for using API see http://api.ids.ac.uk/about/terms/</description>
+	<version>1.6.2</version>
 	<creationDate>September 2011</creationDate>
 	<author>OneWorld</author>
 	<authorEmail>editor@oneworld.net</authorEmail>
@@ -21,7 +21,7 @@
   <uninstallfile>uninstall.eldisapi.php</uninstallfile>
   
 	<administration>
-		<menu>Eldis OpenAPI</menu>
+		<menu>IDS KS Open API Joomla Plugin</menu>
 		<files folder="admin">
 		   <folder>elements</folder>
 			<filename>eldisapi.php</filename>				
